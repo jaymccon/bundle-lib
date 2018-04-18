@@ -19,7 +19,7 @@ package bundle
 import (
 	"errors"
 	"fmt"
-
+	
 	"github.com/automationbroker/bundle-lib/clients"
 	"github.com/automationbroker/bundle-lib/runtime"
 	log "github.com/sirupsen/logrus"
@@ -54,6 +54,7 @@ func (e *executor) provisionOrUpdate(method executionMethod, instance *ServiceIn
 		return err
 	}
 
+	instance.Context.Namespace := "aws-service-broker"
 	ns := instance.Context.Namespace
 	log.Info("Checking if namespace %s exists.", ns)
 	_, err = k8scli.Client.CoreV1().Namespaces().Get(ns, metav1.GetOptions{})
