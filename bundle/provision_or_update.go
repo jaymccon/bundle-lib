@@ -20,8 +20,8 @@ import (
 	"errors"
 	"fmt"
 	
-	"github.com/automationbroker/bundle-lib/clients"
-	"github.com/automationbroker/bundle-lib/runtime"
+	"github.com/jaymccon/bundle-lib/clients"
+	"github.com/jaymccon/bundle-lib/runtime"
 	log "github.com/sirupsen/logrus"
 
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
